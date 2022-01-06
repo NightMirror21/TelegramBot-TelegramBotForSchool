@@ -7,7 +7,7 @@ This bot is hosted on the server and is currently active. You can try it out by 
 
 Download jar -> Open cmd in folder -> Run this command:
 
-`java -jar TelegramBotForSchool-1.0.jar [YOUR_TOKEN]`
+`java -jar TelegramBotForSchool-1.1.jar [YOUR_TOKEN]`
 
 Where **[YOUR_TOKEN]** is the token you received from @BotFather
 

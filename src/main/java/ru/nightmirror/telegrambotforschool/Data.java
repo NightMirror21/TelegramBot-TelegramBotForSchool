@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 
 import java.io.*;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Data {
@@ -51,6 +50,7 @@ public class Data {
                 ) {
             Gson gson = new Gson();
             Classes classes = gson.fromJson(reader, Classes.class);
+
             return classes.getClasses();
         } catch (Exception exception) {
             exception.printStackTrace();
@@ -82,17 +82,14 @@ public class Data {
 
         return null;
     }
-
-    public List<Class> getByNumber(String number) {
-        List<Class> out = new ArrayList<>();
-
-        for (Class temp : getAll()) {
-            if (temp.getNumber().equalsIgnoreCase(number)) out.add(temp);
-        }
-
-        return out;
-    }
 }
+
+/*
+Why all these classes?
+
+These classes allow the GSON library to decompose data from a json file into classes.
+The data in this form looks more structured.
+ */
 
 class Classes {
     List<Class> classes;
