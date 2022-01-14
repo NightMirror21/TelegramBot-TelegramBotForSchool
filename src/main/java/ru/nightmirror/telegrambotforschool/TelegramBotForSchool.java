@@ -1,9 +1,9 @@
 package ru.nightmirror.telegrambotforschool;
 
 import com.pengrad.telegrambot.TelegramBot;
-import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.GetUpdates;
+import ru.nightmirror.telegrambotforschool.handlers.MessageHandler;
 
 import java.util.List;
 
@@ -18,11 +18,10 @@ public class TelegramBotForSchool {
             System.out.println("You forgot to specify the token in the arguments at startup");
             return;
         }
+
         token = args[0];
 
         bot = new TelegramBot(token);
-
-        Data.getInstance().init();
 
         while (true) {
             try {
